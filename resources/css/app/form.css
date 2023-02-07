@@ -1,0 +1,127 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    
+    font-size: 25px;
+
+    background-color: #326789;
+    color: #FBFBFB;
+    border-radius: 15px;
+}
+
+.form__label {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+    font-weight: 700;
+}
+
+.form__input {
+    margin-bottom: 10px;
+    padding: 5px;
+
+    font-size: 25px;
+    color: #FBFBFB;
+
+    background: none;
+    border: none;
+    /* border-bottom: 2px solid #FBFBFB; */
+}
+
+.form__label::after {
+    content: "";
+    width: 315px;
+    position: absolute;
+    top: 65px;
+    
+    border-bottom: 1px solid #FBFBFB;
+    opacity: 0.5;
+    transition-duration: 200ms;
+    background-color: #fff;
+}
+
+.form__label::before {
+    content: "";
+    width: 0px;
+    position: absolute;
+    top: 65px;
+    
+    border-bottom: 1px solid #FBFBFB;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    background-color: #fff;
+}
+
+.form__input:hover,
+.form__input:focus,
+.form__input:active {
+    opacity: 1;
+    outline: none;
+}
+
+.form__label:hover::before,
+.form__label:focus::before,
+.form__label:active::before {
+    content: "";
+    width: 315px;
+    position: absolute;
+    top: 65px;
+    
+    border-bottom: 1px solid #FBFBFB;
+    opacity: 1;
+    transition-duration: 200ms;
+    background-color: #fff;
+}
+
+.form__submit {
+    padding: 5px;
+    margin-bottom: 5px;
+
+    font-size: 25px;
+    color: #FBFBFB;
+
+    background-color: #78A6C8;
+    border: none;
+    border-radius: 15px;
+}
+
+.form__show-pass {
+    position: absolute;
+    left: 270px;
+
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.form__show-pass svg {
+    opacity: 0.5;
+    transition-duration: 200ms;
+}
+
+.form__show-pass:hover svg,
+.form__show-pass:focus svg {
+    opacity: 1;
+}
+
+.form__show-pass::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 0;
+    top: 15px;
+    left: 5px;
+    transform: rotate(45deg);
+
+    border: 1.5px solid #E65C4F;
+    transition-duration: 200ms;
+}
+
+.form__label.text .form__show-pass::after {
+    opacity: 0;
+}

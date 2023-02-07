@@ -7,7 +7,7 @@
             @csrf
             <label for="login" class="form__label">
                 Логин
-                <input type="login" name="login" id="login" class="form__input">
+                <input type="login" name="login" id="login" class="form__input" value="">
             </label>
             <label for="password" class="form__label password">
                 <button class="form__show-pass">
@@ -16,7 +16,7 @@
                     </svg>
                 </button>
                 Пароль
-                <input type="password" name="password" id="password" class="form__input password">
+                <input type="password" name="password" id="password" class="form__input password" value="">
             </label>
             <button type="submit" class="form__submit button">Войти</button>
             <a href="{{route("register")}}" class="form__register-suggestion"></a>

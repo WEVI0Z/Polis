@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,10 @@ Route::middleware("guest")->group(function () {
 
 Route::middleware("user")->group(function () {
     Route::get("logout", [UsersController::class, "logout"])->name("logout");
+
+    Route::middleware("client")->group(function () {
+        Route::get("personal", [ClientsController::class, "showInfo"])->name("personal");
+    });
 });
 
 Route::fallback([AppController::class, "getError"])->name("error");

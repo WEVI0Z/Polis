@@ -1,0 +1,21 @@
+.personal {
+    min-width: 375px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.personal__title {
+    font-size: 40px;
+}
+
+.personal__insurances {
+    padding: 100px;
+    margin: 0;
+    list-style: none;
+}
+
+.personal__insurance {
+    max-width: 800px;
+    min-width: 275px;
+    display: flex;
+}

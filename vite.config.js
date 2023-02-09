@@ -10,6 +10,7 @@ export default defineConfig({
                 "resources/js/app/alerts.js",
                 "resources/js/user/register.js",
                 "resources/js/user/login.js",
+                "resources/js/user/client/personal.js",
             ],
             refresh: true,
         }),

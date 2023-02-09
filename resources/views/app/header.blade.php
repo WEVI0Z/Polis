@@ -15,7 +15,7 @@
                         <li class="nav__item"><a href="">Клиенты</a></li>
                     @endif
                     @if(Auth::user()->role === "client")
-                        <li class="nav__item"><a href="">Личный кабинет</a></li>
+                        <li class="nav__item"><a href="{{route("personal")}}">Личный кабинет</a></li>
                     @endif
                     <li class="nav__item"><a href="{{route("logout")}}">Выйти</a></li>
                 @else

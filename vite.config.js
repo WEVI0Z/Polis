@@ -7,8 +7,9 @@ export default defineConfig({
             input: [
                 "resources/js/app/app.js",
                 "resources/js/app/error.js",
+                "resources/js/app/alerts.js",
                 "resources/js/user/register.js",
-                "resources/js/user/login.js"
+                "resources/js/user/login.js",
             ],
             refresh: true,
         }),

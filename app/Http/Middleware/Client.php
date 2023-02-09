@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Client
 {
@@ -16,6 +17,6 @@ class Client
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        return Auth::user()->role === "client" ? $next($request) : redirect()->back();
     }
 }

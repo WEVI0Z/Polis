@@ -5,9 +5,12 @@
     <section class="login">
         <form action="{{route("login")}}" method="POST" class="login__form form">
             @csrf
-            <label for="login" class="form__label">
+            <p class="form__error-message">
+                {{session("error") ?? ""}}
+            </p>
+            <label for="email" class="form__label">
                 Логин
-                <input type="login" name="login" id="login" class="form__input" value="">
+                <input type="email" name="email" id="email" class="form__input" value="{{old("email")}}">
             </label>
             <label for="password" class="form__label password">
                 <button class="form__show-pass">
@@ -19,7 +22,7 @@
                 <input type="password" name="password" id="password" class="form__input password" value="">
             </label>
             <button type="submit" class="form__submit button">Войти</button>
-            <a href="{{route("register")}}" class="form__register-suggestion"></a>
+            <a href="{{route("register")}}" class="form__register-suggestion">Зарегистрироваться, если нет аккаунта</a>
         </form>
     </section>
 @endsection

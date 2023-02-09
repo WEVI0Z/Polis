@@ -7,10 +7,17 @@
         <nav class="header__nav">
             <ul class="nav__list">
                 @if (Auth::check())
-                    <li class="nav__item"><a href="">Личный кабинет</a></li>
-                    <li class="nav__item"><a href="">Кабинет администратора</a></li>
-                    <li class="nav__item"><a href="">Заявки</a></li>
-                    <li class="nav__item"><a href="">Полисы</a></li>
+                    @if(Auth::user()->role === "admin")
+                        <li class="nav__item"><a href="">Кабинет администратора</a></li>
+                    @endif
+                    @if(Auth::user()->role === "manager")
+                        <li class="nav__item"><a href="">Заявки</a></li>
+                        <li class="nav__item"><a href="">Клиенты</a></li>
+                    @endif
+                    @if(Auth::user()->role === "client")
+                        <li class="nav__item"><a href="">Личный кабинет</a></li>
+                    @endif
+                    <li class="nav__item"><a href="{{route("logout")}}">Выйти</a></li>
                 @else
                     <li class="nav__item"><a href="{{route("login")}}">Вход</a></li>
                     <li class="nav__item"><a href="{{route("register")}}">Регистрация</a></li>

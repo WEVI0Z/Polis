@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $fillable = [
+        "ext_date",
+        "user",
+        "manager",
+        "accepted",
+        "type"
+    ];
+
     use HasFactory;
 }

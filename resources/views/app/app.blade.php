@@ -11,6 +11,7 @@
     @include('app.header')
 
     <main>
+        @include("app.alerts")
         @yield('content')
     </main>
 

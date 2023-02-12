@@ -9,13 +9,222 @@
 }
 
 .personal__insurances {
-    padding: 100px;
+    padding: 0 100px;
     margin: 0;
+
     list-style: none;
 }
 
 .personal__insurance {
-    max-width: 800px;
-    min-width: 275px;
+    width: 600px;
+    margin-bottom: 20px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    border-radius: 20px;
+    border: 2px solid #326789;
+}
+
+.insurance__type {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.insurace__name {
+    padding: 0;
+    margin: 0;
+}
+
+.insurance__info {
+    width: 258.5px;
+    padding: 0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    color: #FBFBFB;
+    
+    list-style-type: none;
+    background-color: #326789;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.car::before {
+    content: "";
+    top: 68px;
+    left: 114px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+
+    background-color: yellow;
+    border-radius: 50%;
+    opacity: 0.85;
+    animation: blink-left 2000ms ease-in-out 100ms infinite;
+}
+
+.car::after {
+    content: "";
+    top: 68px;
+    right: 116px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+
+    background-color: yellow;
+    border-radius: 90%;
+    opacity: 0.85;
+    animation: blink-right 2000ms ease-in-out 200ms infinite;
+}
+
+@keyframes blink-left {
+    0% {
+        width: 12px;
+        height: 12px;
+    }
+
+    25% {
+        width: 24px;
+        height: 48px;
+        top: 70px;
+        left: 120px;
+
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        left: 110px;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        left: 110px;
+        transform: rotate(30deg);
+    }
+
+    100% {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@keyframes blink-right {
+    0% {
+        width: 12px;
+        height: 12px;
+    }
+
+    25% {
+        width: 24px;
+        height: 48px;
+        top: 70px;
+        right: 100px;
+
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        right: 110px;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        right: 120px;
+        transform: rotate(30deg);
+    }
+
+    100% {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.health::before {
+    content: "";
+    bottom: 120px;
+    right: 139px;
+    width: 17px;
+    height: 12px;
+    position: absolute;
+
+    background-color: blue;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation: ambulance 2000ms ease-in-out 200ms infinite;
+}
+
+@keyframes ambulance {
+    0% {
+        background-color: blue;
+    }
+
+    50% {
+        background-color: red;
+        height: 22px;
+        width: 40px;
+        right: 128px;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+.house::after {
+    content: "";
+    top: 62px;
+    right: 127px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+
+    background-color: yellow;
+    border-radius: 20%;
+    opacity: 0.85;
+    animation: house 2000ms 200ms infinite;
+}
+
+.house::before {
+    content: "";
+    top: 62px;
+    left: 128px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+
+    background-color: yellow;
+    border-radius: 20%;
+    opacity: 0.85;
+    animation: house 5000ms 500ms infinite;
+}
+
+@keyframes house {
+    0% {
+        background-color: yellow;
+    }
+    
+    30% {
+        background: none;
+    }
+    
+    70% {
+        background-color: yellow;
+    }
+
+    90% {
+        background: none;
+    }
+    
+    100% {
+        background-color: yellow;
+    }
 }

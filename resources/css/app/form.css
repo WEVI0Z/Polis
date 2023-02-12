@@ -1,3 +1,8 @@
+main {
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -190,4 +195,28 @@
 .form__register-suggestion:hover,
 .form__register-suggestion:focus {
     text-decoration: underline;
+}
+
+.form__label.checkbox {
+    display: flex;
+    width: 100%;
+}
+
+.form__label.checkbox label {
+    padding: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.form__label.checkbox::before {
+    width: 0;
+    background-color: #326789;
+}
+
+.form__label.checkbox::after {
+    width: 0;
+    background-color: #326789;
 }

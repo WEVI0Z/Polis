@@ -36,3 +36,19 @@ main {
     background-color: #FBFBFB;
     color: #E65C4F;
 }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .button {
+    background-color: #326789;
+}
+
+.nav .button:hover {
+    color: #FBFBFB;
+
+    background-color: #78A6C8;
+}

@@ -8,12 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
-        "ext_date",
-        "user",
+        "exp_date",
+        "user_id",
         "manager",
         "accepted",
         "type"
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 
     use HasFactory;
 }

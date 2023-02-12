@@ -28,6 +28,7 @@ Route::middleware("user")->group(function () {
 
     Route::middleware("client")->group(function () {
         Route::get("personal", [ClientsController::class, "showInfo"])->name("personal");
+        Route::match(["post", "get"], "new", [ClientsController::class, "createOrder"])->name("new-order");
     });
 });
 

@@ -11,6 +11,7 @@ export default defineConfig({
                 "resources/js/user/register.js",
                 "resources/js/user/login.js",
                 "resources/js/user/client/personal.js",
+                "resources/js/user/client/new.js",
             ],
             refresh: true,
         }),

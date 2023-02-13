@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ManagersController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,12 @@ Route::middleware("user")->group(function () {
     Route::middleware("client")->group(function () {
         Route::get("personal", [ClientsController::class, "showInfo"])->name("personal");
         Route::match(["post", "get"], "new", [ClientsController::class, "createOrder"])->name("new-order");
+    });
+
+    Route::middleware("manager")->group(function() {
+        Route::get("orders", [ManagersController::class, "showInfo"])->name("orders");
+        Route::get("clients", [ManagersController::class, "showClients"])->name("clients");
+        Route::get("agree/{id}", [ManagersController::class, "agree"])->name("agree");
     });
 });
 

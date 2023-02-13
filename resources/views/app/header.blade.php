@@ -11,8 +11,8 @@
                         <li class="nav__item"><a href="">Кабинет администратора</a></li>
                     @endif
                     @if(Auth::user()->role === "manager")
-                        <li class="nav__item"><a href="">Заявки</a></li>
-                        <li class="nav__item"><a href="">Клиенты</a></li>
+                        <li class="nav__item"><a href="{{route("orders")}}">Заявки</a></li>
+                        <li class="nav__item"><a href="{{route("clients")}}">Клиенты</a></li>
                     @endif
                     @if(Auth::user()->role === "client")
                         <li class="nav__item"><a href="{{route("personal")}}">Личный кабинет</a></li>
